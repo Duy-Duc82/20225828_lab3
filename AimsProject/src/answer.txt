@@ -1,0 +1,1 @@
+Java là Pass by Value, vì mọi thứ truyền vào phương thức đều là bản sao của giá trị ban đầu. Với kiểu cơ bản, giá trị được sao chép, còn với đối tượng, bản sao của tham chiếu (địa chỉ bộ nhớ) được truyền, nhưng không phải tham chiếu trực tiếp đến chính biến gốc.
