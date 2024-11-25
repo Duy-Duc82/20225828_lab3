@@ -4,6 +4,8 @@ public class Cart {
     // Maximum number of DVDs allowed in the cart
     public static final int MAX_NUMBERS_ORDERED = 20;
 
+    
+    
     // Array to store DVDs in the cart
     private DigitalVideoDisc[] itemsOrdered = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
 
