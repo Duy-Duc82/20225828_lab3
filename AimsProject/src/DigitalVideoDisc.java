@@ -1,7 +1,8 @@
 package lab02.src;
-private static int nbDigitalVideoDiscs = 0;
 
 public class DigitalVideoDisc {
+    private static int nbDigitalVideoDiscs = 0;
+    private int id;
     private String title;
     private String category;
     private String director;
@@ -33,40 +34,43 @@ public class DigitalVideoDisc {
         super();
         this.title = title;
         nbDigitalVideoDiscs++;  
-        this.id = nbDigitalVideoDiscs;
+        this.id = getNbDigitalVideoDiscs();
     }
 
     // Constructor with category, title, and cost
-    public DigitalVideoDisc(String category, String title, float cost) {
+    public DigitalVideoDisc(String title, String category,  float cost) {
         this.category = category;
         this.title = title;
         this.cost = cost;
         nbDigitalVideoDiscs++;  
-        this.id = nbDigitalVideoDiscs;
+        this.id = getNbDigitalVideoDiscs();
     }
 
     // Constructor with director, category, title, and cost
-    public DigitalVideoDisc(String director, String category, String title, float cost) {
+    public DigitalVideoDisc(String title, String category,String director, float cost) {
         this.director = director;
         this.category = category;
         this.title = title;
         this.cost = cost;
         nbDigitalVideoDiscs++;  
-        this.id = nbDigitalVideoDiscs;
+        this.id = getNbDigitalVideoDiscs();
     }
 
     // Constructor with director, category, title, length, and cost
-    public DigitalVideoDisc(String director, String category, String title, int length, float cost) {
+    public DigitalVideoDisc(String title, String category ,String director, int length, float cost) {
         this.director = director;
         this.category = category;
         this.title = title;
         this.cost = cost;
         this.length = length;
         nbDigitalVideoDiscs++;  
-        this.id = nbDigitalVideoDiscs;
+        this.id = getNbDigitalVideoDiscs();
     }
-    // vì nbDigitalVideoDiscs là private nên để có thể trích xuất giá trị thì phải tạo một getter cho nó
+    // vì nbDigitalVideoDiscs và là private nên để có thể trích xuất giá trị thì phải tạo một getter cho nó
     public static int getNbDigitalVideoDiscs() {
         return nbDigitalVideoDiscs;
+    }
+    public int getId() {
+        return id;  // Trả về id của DVD
     }    
 }
