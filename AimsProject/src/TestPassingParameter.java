@@ -9,7 +9,6 @@ public class TestPassingParameter {
         System.out.println("\n");
         System.out.print("cinderella dvd title: " + cinderellaDVD.getTitle());
         System.out.println("\n");
-        
         changeTitle(jungleDVD, cinderellaDVD.getTitle());
         System.out.print("jungle dvd title: " + jungleDVD.getTitle());
     }

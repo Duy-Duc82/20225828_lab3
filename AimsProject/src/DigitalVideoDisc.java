@@ -66,6 +66,8 @@ public class DigitalVideoDisc {
         nbDigitalVideoDiscs++;  
         this.id = getNbDigitalVideoDiscs();
     }
+    
+    
     // vì nbDigitalVideoDiscs và là private nên để có thể trích xuất giá trị thì phải tạo một getter cho nó
     public static int getNbDigitalVideoDiscs() {
         return nbDigitalVideoDiscs;
