@@ -1,4 +1,5 @@
 package lab02.src;
+private static int nbDigitalVideoDiscs = 0;
 
 public class DigitalVideoDisc {
     private String title;
@@ -31,6 +32,8 @@ public class DigitalVideoDisc {
     public DigitalVideoDisc(String title) {
         super();
         this.title = title;
+        nbDigitalVideoDiscs++;  
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Constructor with category, title, and cost
@@ -38,6 +41,8 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
+        nbDigitalVideoDiscs++;  
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Constructor with director, category, title, and cost
@@ -46,6 +51,8 @@ public class DigitalVideoDisc {
         this.category = category;
         this.title = title;
         this.cost = cost;
+        nbDigitalVideoDiscs++;  
+        this.id = nbDigitalVideoDiscs;
     }
 
     // Constructor with director, category, title, length, and cost
@@ -55,5 +62,11 @@ public class DigitalVideoDisc {
         this.title = title;
         this.cost = cost;
         this.length = length;
+        nbDigitalVideoDiscs++;  
+        this.id = nbDigitalVideoDiscs;
     }
+    // vì nbDigitalVideoDiscs là private nên để có thể trích xuất giá trị thì phải tạo một getter cho nó
+    public static int getNbDigitalVideoDiscs() {
+        return nbDigitalVideoDiscs;
+    }    
 }
