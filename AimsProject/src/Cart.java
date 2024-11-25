@@ -83,17 +83,42 @@ public class Cart {
     }
 
     // Print information of DVDs in the cart
-    public void printAllDisc() {
-        System.out.println("DVDs in the cart:");
+    public void printCartDetails() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
         for (int i = 0; i < qtyOrdered; i++) {
             DigitalVideoDisc disc = itemsOrdered[i];
-            System.out.println("Title: " + disc.getTitle() +
+            System.out.println((i + 1) + ". DVD - " + disc.getTitle() + " - " + disc.getCategory() + " - " + disc.getDirector() + " - " + disc.getLength() + " mins: " + disc.getCost() + " $");
+        }
+        System.out.println("Total cost: " + totalCost() + " $");
+        System.out.println("*****************************************************");
+    }
+    //day la comment bai 1
+    public void printAllIds() {
+        System.out.println("List of all DVD IDs with full details:");
+        for (int i = 0; i < qtyOrdered; i++) {
+            DigitalVideoDisc disc = itemsOrdered[i];
+            System.out.println((i + 1) + ". ID: " + disc.getId() +
+                               ", Title: " + disc.getTitle() +
                                ", Category: " + disc.getCategory() +
                                ", Director: " + disc.getDirector() +
                                ", Length: " + disc.getLength() +
-                               ", Cost: " + disc.getCost());
+                               " mins, Cost: " + disc.getCost());
         }
     }
-    //day la comment bai 1
+
+    // Search DVDs by title
+    public void printAllTitles() {
+        System.out.println("List of all DVD Titles with full details:");
+        for (int i = 0; i < qtyOrdered; i++) {
+            DigitalVideoDisc disc = itemsOrdered[i];
+            System.out.println((i + 1) + ". Title: " + disc.getTitle() +
+                               ", Category: " + disc.getCategory() +
+                               ", Director: " + disc.getDirector() +
+                               ", Length: " + disc.getLength() +
+                               " mins, Cost: " + disc.getCost() +
+                               ", ID: " + disc.getId());
+        }
+    }
 }
 
