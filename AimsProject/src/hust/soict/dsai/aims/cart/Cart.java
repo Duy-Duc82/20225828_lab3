@@ -1,4 +1,4 @@
-package lab02.src;
+package hust.soict.dsai.aims.cart;
 
 public class Cart {
     // Maximum number of DVDs allowed in the cart

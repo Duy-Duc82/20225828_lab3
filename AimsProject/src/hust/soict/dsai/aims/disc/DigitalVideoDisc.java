@@ -1,4 +1,4 @@
-package lab02.src;
+package hust.soict.dsai.aims.disc;
 
 public class DigitalVideoDisc {
     private static int nbDigitalVideoDiscs = 0;
